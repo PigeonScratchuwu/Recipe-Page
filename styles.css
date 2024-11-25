@@ -5,6 +5,7 @@
     min-height: 100svh;
     width: auto;
     margin: 4rem 17.5rem;
+    display: flex;
   }
   .pink {
     background-color: hsl(330, 100%, 98%);
