@@ -1,91 +1,109 @@
-body {
-    align-items: center;
-    background-color: hsl(30, 54%, 90%);
-    display: flex;
-    flex-direction: column;
+/* General Reset */
+body, h1, h2, p, ul, ol, table {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-/* Flexbox Styling for Main Content */
+body {
+    font-family: "Outfit", sans-serif;
+    background-color: hsl(30, 54%, 90%);
+    color: hsl(24, 5%, 18%);
+    line-height: 1.6;
+    padding: 1rem;
+}
+
+header {
+    text-align: center;
+    padding: 1.5rem 0;
+    background-color: hsl(0, 0%, 98%);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-family: "Young Serif", serif;
+    font-size: 2.5rem;
+    color: hsl(24, 5%, 18%);
+}
+
 main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
 }
 
-.content-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    background-color: hsl(0, 0%, 100%);
-    border-radius: 1rem;
-    max-width: 1200px;
+.hero img {
     width: 100%;
-    margin: 2rem auto;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Image Styling */
-.fill {
-    flex: 1 1 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
+.content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
 }
 
-.fill img {
-    width: 100%;
-    border-radius: 0.5rem;
-    max-height: 400px;
-    object-fit: cover;
+article {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Text Content */
-.text {
-    flex: 1 1 60%;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-/* Section Styling */
-section {
-    margin-bottom: 1.5rem;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    background-color: hsl(0, 0%, 98%);
-}
-
-section h2 {
+article h2 {
     font-family: "Young Serif", serif;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: hsl(14, 45%, 36%);
+    margin-bottom: 1rem;
 }
 
-/* Footer Styling */
+article ul, article ol {
+    list-style: none;
+    padding: 0;
+}
+
+article ul li::before {
+    content: "•";
+    color: hsl(14, 45%, 36%);
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+article ol li {
+    margin-bottom: 1rem;
+}
+
+article table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+article table td {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid lightgray;
+}
+
 footer {
     text-align: center;
     padding: 1rem;
-    background-color: hsl(0, 0%, 95%);
-    border-top: 1px solid lightgray;
-    font-family: "Outfit", sans-serif;
+    background-color: hsl(0, 0%, 98%);
+    margin-top: 2rem;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
     font-size: 0.9rem;
     color: hsl(30, 10%, 34%);
 }
 
 /* Responsive Design */
-@media screen and (max-width: 1024px) {
-    .content-container {
-        flex-direction: column;
-        padding: 1rem;
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
     }
 
-    .fill, .text {
-        flex: 1 1 100%;
+    article {
+        padding: 1rem;
     }
 }
