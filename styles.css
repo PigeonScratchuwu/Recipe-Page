@@ -63,6 +63,11 @@ h2 {
   color: var(--accent-color);
 }
 
+#prep-time-heading {
+  font-size: 1rem;
+  border: none;
+}
+
 .pink {
   background-color: var(--highlight-background);
   border-radius: 10px;
