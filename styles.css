@@ -14,7 +14,7 @@
 }
 
 body {
-  background-color: var(--white);
+  background-color: var(--background-color);
   font-family: "Outfit", sans-serif;
   line-height: 1.6;
   display: flex;
