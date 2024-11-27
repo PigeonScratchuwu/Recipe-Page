@@ -123,6 +123,7 @@ h2 {
   padding: 2px 30px;
   list-style-position: outside;
   font-family: "Outfit", sans-serif;
+  color: var(--text-color);
 }
 
 .instruction-list > li {
@@ -158,6 +159,7 @@ table th, table td {
   font-weight: normal;
   width: 50%;
   display: table-inline;
+  color: var(--text-color);
 }
 
 #fluffy {
