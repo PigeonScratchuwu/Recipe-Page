@@ -6,6 +6,7 @@
   --accent-color: hsl(14, 45%, 36%);
   --highlight-background: hsl(330, 100%, 98%);
   --pink-text: hsl(332, 51%, 32%);
+  --border-color: hsl(30, 18%, 87%);
 }
 
 * {
@@ -69,34 +70,69 @@ p {
 }
 
 h2 {
-  font-size: 1.8rem;
-  border-top: 1px solid lightgray;
-  padding-top: 1rem;
-  margin-top: 1.5rem;
   color: var(--accent-color);
+  font-weight: 400;
+  margin: 5px;
+  padding: 10px 22px;
+  font-family: "Young Serif", serif;
+}
+
+#instructions-heading, #nutrition-heading {
+   border-top: 1px solid var(--border-color);
 }
 
 #prep-time-heading {
   font-size: 1.3em;
   border: none;
   color: var(--pink-text);
+  font-family: "Outfit", sans-serif;
 }
 
 .pink {
   background-color: var(--highlight-background);
   margin: 10px 30px;
-  padding: 20px;
+  padding: 10px;
   border-radius: 8px;
   font-family: "Outfit", sans-serif;
+  line-height: 20px;
 }
 
-ul {
+.prep-time-list {
   padding: 15px 25px;
   color: var(--text-color);
 }
 
-ul > li {
+.prep-time-list > li {
   padding: 5px;
+}
+
+.ingredients-list {
+  list-style-position: inside;
+  margin: 2px;
+  padding: 0 30px;
+  font-family: "Outfit", sans-serif;;
+  color: var(--text-color);
+}
+
+.ingredients-list > li {
+  padding: 5px;
+}
+
+.instructions-list {
+  margin: 5px 20px;
+  padding: 2px 30px;
+  list-style-position: outside;
+  font-family: "Outfit", sans-serif;
+}
+
+.instruction-list > li {
+  padding: 8px;
+  font-weight: 700;
+  color: var(--accent-color);
+}
+
+strong {
+  color: var(--text-color)
 }
 
 ol li::marker {
@@ -111,42 +147,51 @@ ul li::marker {
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 1rem;
+  margin: 10px 35px;
+  align-items: center;
 }
 
 table th, table td {
   text-align: left;
-  padding: 0.75rem;
+  padding: 0.5em;
   border-bottom: 1px solid lightgray;
+  font-weight: normal;
+  width: 50%;
+  display: table-inline;
 }
 
-table th {
-  color: var(--heading-color);
+#fat {
+  border: none;
 }
 
-table td {
-  color: var(--accent-color);
-  font-weight: bold;
+footer {
+   font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  color: hsl(30, 10%, 34%);
+  text-align: center;
+  margin-top: 50px;
+  font-size: 11px;
+}
+
+.attribution > a {
+  text-decoration: none;
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+  color: hsl(14, 45%, 36%);
 }
 
 @media screen and (max-width: 768px) {
-  main {
+ .ultimate-box {
     margin: 0;
-    border-radius: 0;
   }
-
-  .text {
-    padding: 1rem;
+  
+  .main-container {
+    width: 100%;
   }
-
-  h1 {
-    font-size: 2rem;
+  
+  img {
+    width: 100%;
   }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-}
 
 /* Accessibility focus styles */
 :focus {
