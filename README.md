@@ -37,7 +37,7 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
 
 ### What I learned
 
-Before starting this project, I was ingnorant of accessibility requirements and how that worked. While I realize that my use of ARIA may be a tad redundant, I am open to learning more about how to make my pages accessible and coherent. 
+Before starting this project, I was ignorant of accessibility requirements and how that worked. While I realize that my use of ARIA may be a tad redundant, I am open to learning more about how to make my pages accessible and coherent. 
 I also stumbled upon an issue with accessibility with the headings as, for accessibility purposes, they needed to be in order and the prep time heading had to be smaller. This is how I remedied this issue:
 
 ```html
